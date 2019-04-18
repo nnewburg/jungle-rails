@@ -9,11 +9,12 @@ class UsersController < ApplicationController
 
     def create
       @user = User.new(user_params)
-
+      puts @user.id;
     if @user.save
-      redirect_to :root, notice: 'User created!'
-    else
-      render :index
+      session[:user_id] = @user.id
+        redirect_to '/'
+      else
+      redirect_to '/signup'
       end
     end
 
@@ -24,7 +25,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(
       :name,
       :email,
-      :password_digest
+      :password
     )
     end
 
