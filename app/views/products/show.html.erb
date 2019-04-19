@@ -31,7 +31,7 @@
          <%= render 'review', description: item, rating: item, user: item.user_id %>
         <% end %>
       </tbody>
-
+      <% if current_user %>
       <%= form_for :review, url: "/products/#{@product.id}/reviews" do |f| %>
      <h3>Add a Review</h3>-
   <p>
@@ -47,6 +47,7 @@
   <p>
     <%= f.submit %>
   </p>
+  <% end %>
 <% end %>
 
 
