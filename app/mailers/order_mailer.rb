@@ -5,6 +5,6 @@ class OrderMailer < ActionMailer::Base
     puts order
     @order = order
     @url  = 'http://example.com/login'
-    mail(to: 'iloverails@google.com' , subject: 'Welcome to My Awesome Site')
+    mail(to: 'order.email' , subject: "Thanks for your Jungle Order #{order.id}")
   end
 end

@@ -5,6 +5,10 @@
   </header>
 
   <div class="panel panel-default items">
+    <% if enhanced_cart.size == 0 %>
+      <span>Your Cart is empty :( </span>
+      <a href="/">Home</a>
+      <% else %>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -42,11 +46,12 @@
           data-name="Jungle"
           data-description="Khurram Virani's Jungle Order"
           data-locale="auto"
-          data-email="kvirani@gmail.com"
+          data-email="<%= current_user.email%>"
           data-currency="cad">
         </script>
       <% end %>
     </div>
   </div>
+  <% end %>
 
 </section>
