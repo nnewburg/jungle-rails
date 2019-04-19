@@ -10,6 +10,11 @@ class ApplicationController < ActionController::Base
   end
   helper_method :cart
 
+  def findUser(id)
+    @user ||= User.find_by_id(id).name
+  end
+  helper_method :findUser
+
   def enhanced_cart
     @enhanced_cart ||= Product.where(id: cart.keys).map {|product| { product:product, quantity: cart[product.id.to_s] } }
   end
