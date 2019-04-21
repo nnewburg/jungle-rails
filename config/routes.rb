@@ -3,13 +3,14 @@ Rails.application.routes.draw do
   root to: 'products#index'
 
   resources :products, only: [:index, :show] do
-   resource :reviews, only: [:create]
+   resource :reviews, only: [:create, :destroy]
  end
 
   resources :categories, only: [:show]
 
   get '/signup' => 'users#index'
   post '/users' => 'users#create'
+  post '/products/:id/reviews/destroy' => 'reviews#destroy'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
