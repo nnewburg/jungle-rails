@@ -2,6 +2,11 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Lessons Learned
+* The Model Views Controller paradigm that Rails uses extensively
+* Ruby and Rails syntax
+* Seeding a database with components that have more than 1 parent
+* Helper methods in the application_controller
 
 ## Setup
 
@@ -26,3 +31,10 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+* Sass-Rails 5.0
+* Puma
+* Bcrypt
+* Font-awesome-rails
+* Money Rails
+* CarrierWave
+* Rmagick
