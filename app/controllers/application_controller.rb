@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   helper_method :cart
 
   def findUser(id)
-    @user ||= User.find_by_id(id).name
+    @user ||= User.find_by_id(id).first_name
   end
   helper_method :findUser
 

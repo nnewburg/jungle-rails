@@ -1,12 +1,16 @@
 <h1>Signup!</h1>
-
+<div style="width: 500px;
+  clear: both;">
 <%= form_for :user, url: '/users' do |f| %>
 
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
 
+ First Name: <div style="width: 100%; clear:both;">  <%= f.text_field :first_name %> </div>
+ Last Name: <div style="width: 100%; clear:both;">  <%= f.text_field :last_name %> </div>
+ Email:  <div style="width: 100%; clear:both;">  <%= f.text_field :email %> </div>
+ Password:  <div style="width: 100%; clear:both;">  <%= f.password_field :password %> </div>
 
+ <br>
   <%= f.submit "Submit" %>
+  </div>
 
 <% end %>

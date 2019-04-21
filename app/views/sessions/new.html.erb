@@ -1,9 +1,11 @@
 <h1>Login</h1>
-
+<div style="width: 500px;
+  clear: both;">
 <%= form_tag '/login' do %>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password_digest %>
+  Email: <div style="width: 100%; clear:both;"><%= text_field_tag :email %></div>
+  Password:<div style="width: 100%; clear:both;"> <%= password_field_tag :password_digest %></div>
+  <br>
   <%= submit_tag "Submit" %>
-
+</div>
 <% end %>

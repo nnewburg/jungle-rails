@@ -1,10 +1,11 @@
+<div style="background-color:  #e0e0d2; border: 3px #33ccff solid;">
 <tr>
   <td>
-    <p>Review by: <%= findUser(description.user_id) %></p>
-    <span>Review:</span>
-    <p style="border: 1px black solid;"> <%= description.description %></p>
+    <p> <%= findUser(description.user_id) %> says: </p>
+    <p style="border: 3px  #ffffb3 solid; background-color: #ffd480"> <%= description.description %></p>
     <br>
     <p>Rated this product: <%= description.rating %>/5</p>
+    <% if current_user %>
     <% if current_user.id == description.user_id %>
     <%= form_for :review, url: "/products/#{description.product_id}/reviews/destroy" do |f| %>
   <p>
@@ -12,11 +13,12 @@
   </p>
     <%= f.hidden_field :product_id, value: description.product_id %>
     <%= f.hidden_field :id, value: description.id %>
-
   <p>
     <%= f.submit "Delete Review" %>
   </p>
   <% end %>
   <% end %>
+  <% end %>
   </td>
 </tr>
+</div>

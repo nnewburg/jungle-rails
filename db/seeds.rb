@@ -24,7 +24,8 @@ end
 ## USERS
 
 user1 = User.create! ({
-  name: 'David',
+  first_name: 'David',
+  last_name: 'Gilmore',
   email: 'd@d.com',
   password: '123'
 })
@@ -159,6 +160,6 @@ cat3.products.create!({
 
 # user1.reviews.create! description: 'Agni', rating: 4, product: product1
 
-Review.create description: 'agni', rating: 4, user: user1, product: product1
+Review.create description: 'My wife bought me this shirt last Christmas and it is my favourite shirt I have ever owned I eat very carefully when I wear it', rating: 4, user: user1, product: product1
 
 puts "DONE!"
