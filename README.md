@@ -8,6 +8,14 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 * Seeding a database with components that have more than 1 parent
 * Helper methods in the application_controller
 
+## Screenshots
+
+!["Screenshot of Jungle"](https://github.com/nnewburg/jungle-rails/blob/master/docs/jungle1.png?raw=true)
+!["Screenshot of Jungle"](https://github.com/nnewburg/jungle-rails/blob/master/docs/jungle2.png?raw=true)
+!["Screenshot of Jungle"](https://github.com/nnewburg/jungle-rails/blob/master/docs/jungle3.png?raw=true)
+!["Screenshot of Jungle"](https://github.com/nnewburg/jungle-rails/blob/master/docs/jungle4.png?raw=true)
+!["Screenshot of Jungle"](https://github.com/nnewburg/jungle-rails/blob/master/docs/jungle5.png?raw=true)
+
 ## Setup
 
 1. Fork & Clone
